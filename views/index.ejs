@@ -1,0 +1,20 @@
+<%- include('header'); -%>
+
+<div class="container" id="con">
+  <h1><%= date %></h1>
+  <div class="sub-con">
+    <div>
+      <ul>
+        <% for(var i = 0; i < newListItem.length; i++) { %>
+        <li><%= newListItem[i] %></li>
+        <% } %>
+      </ul>
+      <p class="line"></p>
+      <form action="/" method="post">
+        <input type="text" name="newItem" />
+        <input type="submit" value="Add" />
+      </form>
+    </div>
+  </div>
+</div>
+<%- include('footer'); -%>
