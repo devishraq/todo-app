@@ -1,10 +1,8 @@
 module.exports.getDate = () => {
-  const options = {
+  const date = new Date();
+  return date.toLocaleDateString("en-US", {
     weekday: "long",
     month: "long",
     day: "numeric",
-  };
-
-  const date = new Date();
-  return date.toLocaleDateString("en-US", options);
+  })
 };
